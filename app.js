@@ -61,8 +61,69 @@ function cal(target) {
 console.log(cal(25));
 
 // prompt 값을 넣으세요 블록
-const agePrompt = prompt("MudaMuda how?");
-console.log(typeof agePrompt, typeof parseInt(agePrompt));
-console.log("+ 어쩃뜬 스트링이네?" +
-    "그럼 어떻게 바꿔?");
+// const agePrompt = prompt("MudaMuda how?");
+// console.log(typeof agePrompt, typeof parseInt(agePrompt));
+// console.log("+ 어쩃뜬 스트링이네?" +
+//     "그럼 어떻게 바꿔?" +
+//     "parseInt 라는 메소드사용");
 
+const usefulFunc = isNaN(false);
+if (usefulFunc)
+    console.log("숫자아님~");
+
+console.log("당연히 else if 도 있다.")
+console.log("document 객체는 내 브라우저를 의미한다.")
+
+const title = document.getElementById("title");
+title.innerText = "알겠으니까 바꿔. by JS";
+
+const classes = document.getElementsByClassName("h3");
+console.log(classes);
+
+const qs = document.querySelector(".h3/*div*/ h4");
+const qsIdFinder = document.querySelector("#h3");
+const qsProxy = document.getElementById("h3");
+console.log(qs);
+console.log(qsIdFinder);
+console.log(qsProxy);
+const qsa = document.querySelectorAll(".h3/*div*/ h4");
+console.log(qsa);
+
+title.style.color = "green";
+
+function handleTitleCLick() {
+    console.log("Stop clicking Title");
+    if (title.style.color === "blue") {
+        title.style.color = "green";
+    } else {
+        title.style.color = "blue";
+    }
+
+}
+
+function asdf() {
+    console.log("testmethod1");
+}
+
+title.addEventListener("mouseover", handleTitleCLick);
+title.onclick = asdf;
+
+window.addEventListener("resize", handleWindow);
+
+function handleWindow() {
+    document.body.style.backgroundColor = "tomato";
+}
+
+title.onclick = reRoll;
+
+function reRoll() {
+    if (document.body.style.backgroundColor === "tomato") {
+        document.body.style.backgroundColor = "beige";
+    }
+}
+
+function good() {
+    alert("I'm in online");
+}
+
+window.addEventListener("online", good);
